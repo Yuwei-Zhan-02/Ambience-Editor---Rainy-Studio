@@ -1,16 +1,115 @@
-# React + Vite
+# Rainy Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An immersive writing editor built with React and Vite.
 
-Currently, two official plugins are available:
+Rainy Studio is a vibe-focused text editor designed to make writing feel like sitting inside a rainy scene. It combines a centered writing panel, scene switching, adjustable typography, and animated rainy background effects to create a calm, atmospheric writing experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Scene switching for different writing moods
+  - Rainy Forest
+  - Rainy Room
+  - Rainy Lake
+- Adjustable rain intensity
+- Adjustable font family and font size
+- Centered writing panel floating above the background
+- Full-screen immersive layout
+- Rain-on-glass shader background effect
+- Built with React + Vite for fast iteration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- twgl.js
+- WebGL shader-based rain background
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```bash
+src/
+├── components/
+│   ├── Toolbar.jsx
+│   ├── ScenePanel.jsx
+│   ├── EditorPanel.jsx
+│   └── RainBackgroundLayer.jsx
+├── App.jsx
+└── index.css
+
+public/
+└── backgrounds/
+    ├── rainy-forest.jpg
+    ├── rainy-room.jpg
+    └── rainy-lake.jpg
+````
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+### 3. Open in browser
+
+```bash
+http://localhost:5173
+```
+
+## Current Status
+
+This project is currently an early prototype.
+
+Implemented so far:
+
+* immersive full-screen UI
+* floating toolbar and settings panel
+* centered writing area
+* scene-based background switching
+* adjustable rain intensity
+* adjustable font controls
+* shader-based rainy background effect
+
+Planned improvements:
+
+* local save and file export
+* better scene-specific tuning
+* refined rain presets for different environments
+* smoother transitions between scenes
+* optional ambient sound
+* further visual polish
+
+## Notes
+
+The project currently uses scene background images placed in `public/backgrounds/`.
+
+To add or replace scenes, update:
+
+* the image files in `public/backgrounds/`
+* the scene mapping in `App.jsx`
+
+## Shader Credit
+
+The current rain-on-glass effect is adapted from a ShaderToy rain shader by Martijn Steinrucken (BigWings), licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0. 
+
+If you plan to use this project commercially, review the shader license carefully before doing so. 
+
+## Development
+
+This project was bootstrapped with Vite and uses a React-based component structure for UI and scene controls.
+
+For production-ready improvements, future work may include:
+
+* refactoring inline styles into a design system
+* adding persistent storage
+* improving accessibility
+* refining performance for large screens and high-resolution images
+
+
